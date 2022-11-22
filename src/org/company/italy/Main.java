@@ -25,20 +25,30 @@ public class Main {
 		
 		int maxYearIncome = Integer.MIN_VALUE;
 		int minYearIncome = Integer.MAX_VALUE;
+		Person maxYearIncomePerson = null;
+		Person minYearIncomePerson = null;
+		int sumIncome = 0;
+		int allWorkers = company.length;
+		
 		for(int i=0;i<company.length;i++) {
 			Person p = company[i];
+			sumIncome +=p.getYearIncome();
+		
 			
 			int YearIncome = p.getYearIncome();
 			if(maxYearIncome < YearIncome) {
 				maxYearIncome = YearIncome;
-				System.out.print(p);
+				maxYearIncomePerson = p;
+				System.out.print("il dipendente che guadagna di piu è :" + p.getFullName());
 			}
-			else if(minYearIncome >= YearIncome) {
+			else if(minYearIncome > YearIncome) {
 				minYearIncome = YearIncome;
-				System.out.print(p);
+				minYearIncomePerson = p;
+				System.out.print("il dipendente che guadagna di meno è :" + p.getFullName());
 			}
 			
 		}
-	
+		System.out.print("la spesa complessiva di tutti i dipendenti sara:" + sumIncome + "€");
+		System.out.print("\nla stipendio medio di tutti i dipendenti sara:" + sumIncome/allWorkers + "€");
 	}
 }
