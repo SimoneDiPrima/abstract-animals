@@ -48,6 +48,7 @@ public class Main {
 			}
 			
 		}
+		
 		System.out.print("la spesa complessiva di tutti i dipendenti sara:" + sumIncome + "€");
 		System.out.print("\nla stipendio medio di tutti i dipendenti sara:" + sumIncome/allWorkers + "€");
 	}
