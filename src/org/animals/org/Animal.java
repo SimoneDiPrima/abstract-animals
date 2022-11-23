@@ -1,5 +1,6 @@
 package org.animals.org;
 
+
 public abstract class Animal {
 	private String type;
 	
@@ -14,10 +15,12 @@ public abstract class Animal {
 	}
 	
 	
+	
 	public abstract String verso();
 	public String toString(){
 		return "l animale scelto per la nostra ricerca è:" + getType();
 		
 	}
+	
 	
 }

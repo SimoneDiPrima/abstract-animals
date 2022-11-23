@@ -1,6 +1,7 @@
 package org.animals.org;
 
-public class Bird extends Animal{
+
+public class Bird extends Animal implements IVolante{
 	private String specificType;
 	private String dormi;
 	private String mangia;
@@ -28,9 +29,13 @@ public class Bird extends Animal{
 	public void setMangia(String mangia) {
 		this.mangia = mangia;
 	}
-	public String verso(){
+	@Override public String verso(){
 		return "Cip Cip Cip";
 	}
+	@Override public void vola() {
+		System.out.println("il canarino sta volando");
+	}
+	
 	@Override public String toString(){
 		return "l animale scelto per la nostra ricerca è della famiglia:" + getType()+
 				"\nin particolare la sua sottofamiglia è: " + getSpecificType()

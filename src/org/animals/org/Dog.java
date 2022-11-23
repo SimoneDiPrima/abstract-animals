@@ -1,6 +1,6 @@
 package org.animals.org;
 
-public class Dog extends Animal {
+public class Dog extends Animal implements INuotante{
 	private String specificType;
 	private String dormi;
 	private String mangia;
@@ -35,6 +35,12 @@ public String getDormi() {
 	public void setMangia(String mangia) {
 		this.mangia = mangia;
 	}
+	public void nuota() {
+		
+		System.out.println("cane sta nuotando");
+	}
+	
+	
 	@Override public String toString(){
 		return "l animale scelto per la nostra ricerca è della famiglia:" + getType()+
 				"\nin particolare la sua sottofamiglia è: " + getSpecificType()

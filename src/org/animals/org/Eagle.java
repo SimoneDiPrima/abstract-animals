@@ -1,6 +1,7 @@
 package org.animals.org;
 
-public class Eagle extends Animal{
+
+public class Eagle extends Animal implements IVolante{
 	private String specificType;
 	private String dormi;
 	private String mangia;
@@ -27,6 +28,9 @@ public class Eagle extends Animal{
 	}
 	public void setMangia(String mangia) {
 		this.mangia = mangia;
+	}
+	@Override public void vola() {
+		System.out.println("l aquila sta volando");
 	}
 	@Override public String verso(){
 		return "Gneeee Gneeeeeeeeeeee Gneeeeek";

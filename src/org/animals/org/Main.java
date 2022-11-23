@@ -9,10 +9,30 @@ public class Main {
 		
 		System.out.print(a);
 		System.out.println("\n--------------------------");
+		faiNuotare(a);
+		System.out.println("\n--------------------------");
 		System.out.print(titti);
+		System.out.println("\n--------------------------");
+		faiVolare(titti);
 		System.out.println("\n--------------------------");
 		System.out.print(WhiteEagle);
 		System.out.println("\n--------------------------");
+		faiVolare(WhiteEagle);
+		System.out.println("\n--------------------------");
 		System.out.print(Flipper);
+		System.out.println("\n--------------------------");
+		faiNuotare(Flipper);
+		
+	}
+		private static void faiVolare(IVolante AnimalIVolante) {
+		
+			AnimalIVolante.vola();
+		System.out.print(AnimalIVolante);
+	}
+		
+		private static void faiNuotare(INuotante animalINuotante) {
+		
+		animalINuotante.nuota();
+		System.out.print(animalINuotante);
 	}
 }
